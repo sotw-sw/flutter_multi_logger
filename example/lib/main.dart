@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
-import 'package:sotw_multi_logger/multi_logger.dart';
+import 'package:sotw_multi_logger/sotw_multi_logger.dart';
 
 void main() {
   MultiLogger.initialize(
