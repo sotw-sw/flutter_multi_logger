@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:logger/logger.dart';
+import 'package:sotw_multi_logger/multi_logger.dart';
 
 void main() {
+  MultiLogger.initialize(
+    .new([
+      (filter, level) =>
+          Logger(filter: filter, level: level, printer: PrettyPrinter()),
+    ]),
+  );
   runApp(const MyApp());
 }
 
@@ -10,6 +18,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    logger?.i('test');
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
